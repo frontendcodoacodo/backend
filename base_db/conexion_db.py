@@ -5,7 +5,7 @@ config_dev = {
   'user': 'root',
   'password': '',
   'host': '127.0.0.1',
-  'database': 'turismo_db1',
+  'database': 'turismo_db2',
 }
 
 #datos de nuestro despliegue: pythonanywhere, editar cuando tengamos
