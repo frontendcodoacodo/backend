@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <title>CONTACTO - EXPERIENCIA ARGENTINA VIAJES</title>
+</head>
+<body>
+    <header class="header">
+
+    </header>
+    
+<div class="container">
+    <div class="contactUS">
+        <div class="title">
+            <h2 hidden>Contactanos</h2>
+        </div>
+        <div class="box">
+            <div class="contact form"  id="myform"  onsubmit="event.preventDefault(); validateForm()" >
+                <div id="error_mensaje" class="error_mensaje"></div>
+                <h3>Comunicate con nosotros</h3>
+                <form class="formBox">
+
+                    <div class="row50">
+                        <div class="inputBox">
+                            <span>Nombre <sup class="sup">*requerido</sup>  </span>
+                            <input type="text" placeholder="Juan" id="validationNombre" >
+                            <small class="error"></small>
+                        </div>
+                        <div class="inputBox">
+                            <span>Apellido <sup class="sup">*requerido</sup> </span>
+                            <input type="text" placeholder="Perez" id="validationApellido"  >
+                            <small class="error"></small>
+                        </div>
+                        <div class="inputBox">
+                            <span>Genero</span>
+
+                            <select name="gen" id="ValidationGen" class="gen">
+                              <option value="masculino">Masculino</option>
+                              <option value="femenino">Femenino</option>
+                            </select>
+                            <small class="error"></small>
+                        </div>
+                    </div>
+
+                    <div class="row50">
+                            <div class="inputBox">
+                                <span>Correo Electronico <sup class="sup">*requerido</sup> </span>
+                                <input type="text" placeholder="juanperez@gmail.com" id="validationEmail" >
+                                <small class="error"></small>
+                            </div>
+                            <div class="inputBox radio">
+                                <span>¿ Como nos Conociste ?</span>
+                                <!-- Group ✅ -->
+                                <input type="radio" name="contact" id="google" class="options" checked>
+                                <label for="google">Google</label>
+                                <input type="radio" name="contact" id="redes" class="options">
+                                <label for="redes">Redes Sociales</label>
+                                <input type="radio" name="contact" id="otros" class="options">
+                                <label for="otros">Otros</label>
+                                <small class="error"></small>
+                            </div>
+                    </div>
+                    <div class="row100">
+                        <div class="inputBox">
+                            <span>Consulta <sup class="sup">*requerido</sup> </span>
+                            <textarea placeholder="Tengo una consulta sobre.." name="" id="validationConsulta" ></textarea>
+                            <small class="error"></small>
+                        </div>        
+                    </div>   
+                    <div class="row100">
+                        <div class="inputBox">
+                            <input type="submit" value="Enviar Consulta">
+                            <p id="success"></p>
+                        </div>        
+                    </div>  
+                        
+                </form>
+            </div>
+            <div class="contact info">
+                <h3>Informacion de Contacto</h3>
+                <div class="infoBox">
+                    <div>
+                        <span><i class="fas fa-map-marker-alt"></i></span>
+                        <p>República de Eslovenia 1901, C1426 <br> Ciudad Autónoma de Buenos Aires
+                        </p>
+                    </div>
+                    <div>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <a href="mailto:experienciaargentinaviajes@gmail.com" class="email">experienciaargentinaviajes@gmail.com</a>
+                    </div>   
+                    <div>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <a href="tel:+54011121212">+54 011 121212</a>
+                    </div> 
+                    <ul class="sci">
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>   
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="contact map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d580.7732300009619!2d-58.43441465002965!3d-34.57002178765256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5c12e50fb3f%3A0x96e4785da9aed6d0!2sEVEREST%20PROPIEDADES!5e0!3m2!1ses-419!2sar!4v1714499638294!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>    
+</div>
+        <footer class="footer">
+
+        </footer>
+
+        <script src="js/header.js"></script> 
+        <script src="js/footer.js"></script>
+        <script src="js/app.js"></script>  
+        <script src="https://kit.fontawesome.com/fb972792d5.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.1rem;
+    border: 0;
+}
+.title{
+    color: rgb(19, 89, 150);
+    font-size: 50px; 
+}
+
+/*body*/
+
+body {
+    position: relative;
+    padding-bottom: 0rem;
+    background-color: aliceblue;
+    padding-top: 5rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    }
+
+    .container {
+        margin: 0 auto;
+        background-color: aliceblue;
+        min-height: calc(100vh - 100px - 50px);
+
+    } 
+
+
+    .about_section {
+        background-size: 65%;
+        background-color: aliceblue;
+        overflow: hidden;
+        padding: 100px 0;
+        background-image: url(../img/VISITA\ ARGENTINA\ \,\ VIVI\ ARGENTINA.gif);
+        background-repeat: no-repeat;
+        background-position: left center;
+
+    }
+    
+    .inner_container {
+        width: 55%;
+        float: right;
+        background-color: aliceblue;
+        padding: 150px;
+        border-radius: 25px;
+    }
+
+    .inner_container h1 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+
+    .text {
+        font-size: 18px;
+        line-height: 30px;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .skills {
+        display: flex;
+        justify-content: space-around;
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: capitalize;
+    }
+    
+    @media screen and (min-width:0px) and (max-width: 367px) {
+    
+
+        .inner_container {
+            width: 95%;
+            padding:0px;
+            border-radius: 25px;
+        }
+        
+        .text {
+            font-size: 12px;
+            padding: 10px 10px 0 10px;
+        }
+        
+        .inner_container h1 {
+            font-size: 20px;
+            padding: 10px 0px 0 10px;
+        }
+        
+        .about_section {
+            background-size: 250%;
+            background-color: aliceblue;
+            padding: 40px 0;
+            background-image: url(../img/VISITA\ ARGENTINA\ \,\ VIVI\ ARGENTINA\ SIN\ TEXTO.gif);
+    
+        }
+    }
+    
+    @media screen and (min-width:368px) and (max-width: 574px) {
+    
+
+        .inner_container {
+            width: 95%;
+            padding:40px;
+            border-radius: 25px;
+        }
+        
+        .text {
+            font-size: 13px;
+        }
+        
+        .inner_container h1 {
+            font-size: 20px;
+        }
+        
+        .about_section {
+            background-size: 250%;
+            background-color: aliceblue;
+            padding: 30px 0;
+            background-image: url(../img/VISITA\ ARGENTINA\ \,\ VIVI\ ARGENTINA\ SIN\ TEXTO.gif);
+    
+        }
+    }
+
+    @media screen and (min-width:575px) and (max-width: 991px) {
+    
+
+        .inner_container {
+            width: 80%;
+            padding:40px;
+            border-radius: 25px;
+        }
+        
+        .text {
+            font-size: 14px;
+        }
+        
+        .inner_container h1 {
+            font-size: 25px;
+        }
+        
+        .about_section {
+            background-size: 100%;
+            background-color: aliceblue;
+            padding: 100px 0;
+            background-image: url(../img/EXPERIENCIA\ ARGENTINA.gif);
+    
+        }
+    }
+
+    @media screen and (min-width:992px) and (max-width: 1199px) {
+        
+        .inner_container {
+            width: 55%;
+            padding: 30px;
+        }
+        
+        .about_section {
+            background-size: 95%;
+            padding: 150px 0;
+        }
+        
+        
+
+    }
+    
+    @media screen and (min-width:1200px) and (max-width: 1600px) {
+        .inner_container {
+            width: 55%;
+            padding: 100px;
+        }
+
+        .about_section {
+            background-size: 75%;
+            padding: 100px;
+    
+        }
+
+    }
+    
+    

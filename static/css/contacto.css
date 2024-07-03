@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.1rem;
+    border: 0;
+}
+
+/*body*/
+
+body {
+    position: relative;
+    padding-bottom: 0rem;
+    
+    padding-top: 5rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    background: aliceblue
+    }
+
+    .container {
+        margin: 0 auto;
+        min-height: calc(100vh - 100px - 50px);
+    } 
+
+    .contactUS {
+        position: relative;
+        width: 100%;
+        padding: 40px 100px;
+    }
+
+    .contactUS .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+
+    .contactUS .title h2 {
+        font-weight: 500;
+        color: black;
+        font-size: 2rem;
+    }
+
+    .form {
+        grid-area: form;
+    }
+
+    .info {
+        grid-area: info;
+    }
+
+    .map {
+        grid-area: map;
+    }
+
+    .contact {
+        padding: 40px;
+        background: rgb(0,212,255);
+        background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(0,146,255,1) 100%);
+        border-radius: 50px;
+    }
+
+    .box {
+        position: relative;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 5fr 4fr;
+        grid-template-areas: "form info" "form map";
+        grid-gap: 20px;
+        margin-top: 20px;
+    }
+
+    .contact h3 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: rgb(255, 255, 255);
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgb(145, 220, 255);
+        padding-bottom: 10px;
+    }
+
+    .formBox {
+        position: relative;
+        width: 100%;
+    }
+
+    .formBox .row50 {
+       display: flex;
+       gap:20px
+    }
+
+    .formBox .row100 .inputBox {
+        width: 100%;
+    }
+        
+    .inputBox {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        width: 50%;
+    }
+
+    .inputBox span {
+        font-size: 1rem;
+        font-weight: 800;
+        color: rgb(255, 255, 255);
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }
+
+    .inputBox input,
+    .inputBox textarea {
+        padding: 10px;
+        border: 1px solid rgb(255, 255, 255);
+        font-size: 1.1em;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+    .formBox input {
+        padding: 10px;
+        border: 1px solid rgb(255, 255, 255);
+        font-size: 1.1rem;
+        outline: none;
+        transition: all 0.3s;
+        box-sizing: border-box;
+    }
+
+    .inputBox input:hover {
+        transform: scale(1.05);
+    }
+
+    .formBox input:focus {
+        border: 1px solid rgb(255, 255, 255);
+    }
+
+    .formBox .row50 input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        font-size: 1rem;
+    }
+    
+    .formBox .row50 .inputBox .gen {
+        border-radius: 15px;
+        padding: 5px
+    }
+    
+    .formBox .row50 .inputBox span .sup {
+        color: #ff0000;
+        margin-left: 2%;
+        font-size: 0.7rem;
+        font-weight: 800;
+    }
+    
+    .formBox .row100 .inputBox span .sup {
+        color: #ff0000;
+        font-size: 0.7rem;
+        font-weight: 800;
+    }
+    
+    
+    .formBox .row50 .inputBox  {
+        border-radius: 15px;
+        padding: 5px
+    }
+    
+    .formBox .row50 .radio label {
+        color: #eee;
+        font-size: 17px;
+    }
+    
+    .formBox .row50 .radio .options {
+        display: flex;
+    
+    }  
+   
+    .formBox textarea {
+        padding: 10px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        outline: none;
+        font-size: 1.1rem;
+        resize: none;
+        min-height: 220px;
+        margin-bottom: 10px;
+    }
+
+    .formBox textarea:focus {
+        border: 1px solid rgb(255, 255, 255);
+    }
+
+    .formBox .inputBox input[type="submit"] {
+        background: rgb(0, 140, 255);
+        color: #fff;
+        border: none;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 5px;
+        max-width: max-content;
+        padding: 14px 15px;
+    }
+
+    .formBox .inputBox input[type="submit"]:hover {
+        background-color: aliceblue;
+        color: rgb(0, 140, 255);
+        transform: scale(1.05);
+    }
+
+    .inputBox ::placeholder {
+        color: rgb(61, 61, 61);
+    }
+
+    .info {
+        background-color: rgba(255, 228, 196, 0);
+    }
+
+    .info h3 {
+        color: #ffffff;
+    }
+
+    .info .infoBox div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .info .infoBox div span {
+        min-width: 40px;
+        height: 40px;
+        color: rgb(0, 136, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        margin-right: 15px;
+        background-color: #ffffff;
+        transition: all 0.3s;
+    }
+
+    .info .infoBox div span:hover {
+        transform: scale(1.1);
+    }
+
+    .info .infoBox div p {
+        color: #fff;
+        font-size: 1.1rem;
+    }
+
+    .info .infoBox div a {
+        color: #fff;
+        text-decoration: none;
+        list-style: none;
+        outline: none;
+        transition: all 0.3s;
+        font-size: 1.1rem;
+    }
+
+    
+    .info .infoBox div a:hover {
+        color: #006eff;
+        text-decoration: none;
+        list-style: none;
+        outline: none;
+    }
+
+    .sci {
+        margin-top: 40px;
+        display: flex;
+    }
+
+    .sci li {
+        list-style: none;
+        margin-right: 15px;
+        
+    }
+
+    .sci li a {
+        color: #fff;
+        font-size: 1.8rem;
+        transition: all 0.3s;
+        padding: 10px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sci li a:hover {
+        transform: scale(1.1);
+    }
+
+   /* .sci li a i {
+        color: #fff;
+        font-size: 1.5rem;
+        transition: all 0.3s;
+        padding: 15px;
+        border-radius: 50%;
+        background-color: #006eff;
+    }  
+
+    .sci li a i:hover {
+        transform: scale(1.1);
+    }  */
+
+    .sci li a .fab,
+    .sci li a .fa-brands
+     {
+        font-size: 1.5rem;
+        color: #ffffff;
+        padding: 15px;
+        background-color: #006eff;
+        transition: all 0.3s;
+        border-radius: 50%;
+    }
+
+    .sci li a .fab:hover,
+    .sci li a .fa-brands:hover {
+        transform: scale(1.1);
+        background-color: #fff;
+        color: #006eff;
+    }
+
+    .map {
+        padding: 0;
+    }
+
+    .map iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        border: 1px solid rgb(0, 89, 255);
+    }
+
+    .box .error_mensaje {
+        padding: 0px;
+        color: rgb(255, 0, 0);
+        margin-bottom: 20px;
+        font-weight: 700;
+        border: none;
+        border-radius: 35px;
+        font-size: 0.8rem;
+    }
+
+    .error { 
+        color: red;
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+
+    .error-border {
+        border-bottom: 1px solid red;
+    }
+
+    #success {
+        color: rgb(255, 255, 255);
+        margin-top: 10px;
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    #btn-clear {
+        color: rgb(255, 255, 255);
+    }
+    
+    
+    
+    @media screen and (min-width:0px) and (max-width: 375px) {
+        .contactUS {
+            padding: 20px;
+        }
+
+        .contact {
+            padding: 30px;
+        }
+
+        .box {
+            position: relative;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: auto;
+            grid-template-areas: "form" "info" "map";
+            grid-gap: 20px;
+            margin-top: 20px;
+        }
+
+        .formBox .row50 {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+        }
+
+        .inputBox {
+            width: 100%;
+        }
+        
+        .info .infoBox .email {
+            font-size: 0.6rem;
+            color: #ffffff;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .map {
+            min-height: 300px;
+            padding: 0;
+        }
+        
+
+    }
+    
+    
+    @media screen and (min-width:376px) and (max-width: 575px) {
+        .contactUS {
+            padding: 20px;
+        }
+
+        .contact {
+            padding: 30px;
+        }
+
+        .box {
+            position: relative;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: auto;
+            grid-template-areas: "form" "info" "map";
+            grid-gap: 20px;
+            margin-top: 20px;
+        }
+
+        .formBox .row50 {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+        }
+
+        .inputBox {
+            width: 100%;
+        }
+        
+        .info .infoBox .email {
+            font-size: 0.9rem;
+            color: #ffffff;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .map {
+            min-height: 300px;
+            padding: 0;
+        }
+        
+
+    }
+
+
+    @media screen and (min-width:576px) and (max-width: 991px) {
+        .contactUS {
+            padding: 20px;
+        }
+
+        .contact {
+            padding: 30px;
+        }
+
+        .box {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: "form" "info" "map";
+            grid-gap: 20px;
+            margin-top: 20px;
+        }
+
+        .formBox .row50 {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+        }
+
+        .inputBox {
+            width: 100%;
+        }
+
+        .map {
+            min-height: 300px;
+            padding: 0;
+        }
+
+    }
+
+    @media screen and (min-width:992px) and (max-width: 1200px) {
+        .contactUS {
+            padding: 15px;
+        }
+
+    }
+
+
+
