@@ -8,12 +8,12 @@ config_dev = {
   'database': 'turismo_db2',
 }
 
-#datos de nuestro despliegue: pythonanywhere, editar cuando tengamos
+#datos de nuestro despliegue: pythonanywhere
 config_prod = {
-  'user': 'ChToleCAC',
-  'password': '2024CACPythonFS',
-  'host': 'ChToleCAC.mysql.pythonanywhere-services.com',
-  'database': 'ChToleCAC$default',
+  'user': 'juampaCaC',
+  'password': 'prueba1234',
+  'host': 'juampaCaC.mysql.pythonanywhere-services.com',
+  'database': 'juampaCaC$turismo_db2024',
 }
 
 conexion = mysql.connector.connect(**config_dev)  

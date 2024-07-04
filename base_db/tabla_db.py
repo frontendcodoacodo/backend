@@ -6,7 +6,8 @@ class Tabla:
         self.conexion = conexion
         self.campos = campos
     
-    # CRUD
+    # *** CRUD ***
+    # creador/constructor de instancias subclase
     def crear(self, valores, de_bbdd=False):
         if de_bbdd:
             # del modelo --> args = (valores) # (())
@@ -17,7 +18,9 @@ class Tabla:
                 setattr(self, campo, valor)
     
     def guardar_db(self):
+        # campos_q = "('campo_2', ..... 'campo_n')"
         campos_q = str(self.campos[1:]).replace("'", "`")
+        # values_q = "(%s, ..... %s )" #como cant de campos
         values_q = f"({'%s, ' * (len(self.campos)-2)} %s)"
         consulta = (f"INSERT INTO {self.tabla} {campos_q} "
                     f"VALUES {values_q};")
@@ -29,7 +32,7 @@ class Tabla:
         
         return 'No se pudo crear el registro.'
             
-    
+    #Lectura
     @classmethod
     def obtener(cls, campo=None, valor=None):
         
@@ -45,6 +48,7 @@ class Tabla:
         
         return resultado
      
+     #Eliminacion
     @classmethod
     def eliminar(cls, id):
         consulta = (f"DELETE FROM {cls.tabla} WHERE id = %s ;")
@@ -55,9 +59,11 @@ class Tabla:
             
         return 'No se pudo eliminar el registro.'
         
-    
+    #Modificacion
     @classmethod
     def modificar(cls, registro):
+        #type(registro) = dictionary
+        
         update_q = f"UPDATE {cls.tabla} "
         set_q = 'SET'
         
@@ -66,10 +72,11 @@ class Tabla:
         
         for c in list(registro.keys()):
             set_q += f' {c} = %s,'
-        
+        # SET nombre = %s, dni = %s
         set_q = set_q[0:-1]       
+        # SET nombre = %s, dni = %s # saca la ultima coma
         where_q = f" WHERE id = %s;"
-        consulta = update_q + set_q +where_q    
+        consulta = update_q + set_q + where_q    
         nvos_datos = *list(registro.values()), id
         rta_db = cls.__conectar(consulta, nvos_datos)
         
@@ -78,6 +85,8 @@ class Tabla:
         
         return 'No se pudo modificar el registro.'
 
+
+    # *** Metodo en comun en CRUD (encapsulado) ***
     @classmethod        
     def __conectar(cls, consulta, datos=None):
         
@@ -96,6 +105,7 @@ class Tabla:
             
             rta_db = cursor.fetchall()
             
+            # Lista por comprensión
             if rta_db != []:
                 resultado = [cls(registro, de_bbdd=True) \
                                 for registro in rta_db]

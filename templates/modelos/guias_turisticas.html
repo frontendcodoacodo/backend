@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+    GUIAS TURISTICAS- TURISMO ARG 
+{% endblock titulo %}
+
+{% block contenido %}
+
+<h2 class="color5">Guias turisticas disponibles en la aplicación</h2>
+<div class="articulos unaColumna">
+    <article>
+        {% if mensaje != None %}
+            <h3>{{ mensaje }}</h3>
+        {% endif %}
+        <table>
+            <thead>
+                <tr>
+                    <td class="bold">Lugar</td>
+                    <td class="bold">Inicio</td>
+                    <td class="bold">Guia</td>
+                </tr>
+            </thead>
+            <tbody>
+            {% for guia_turistica in guias_turisticas %}
+                <tr>
+                    <td><a href="{{ url_for('ver_detalle', id=guia_turistica.id, tipo='guia_turistica') }}" title="Ver detalle">{{ guia_turistica.lugar_turisttico_id }}</a></td>
+                    <td>{{ guia_turistica.fecha_inicio.strftime('%d-%m-%Y') }}</td>
+                    <td>{{ guia_turistica.guia }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </article>
+    <div class="crear">
+        <a href="{{ url_for('crear', tipo='guia_turistica') }}" class="menuSPA color2">Crear guia_turistica</a>
+    </div>
+</div>
+
+{% endblock contenido %}

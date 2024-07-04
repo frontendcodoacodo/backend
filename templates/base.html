@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='static/css/styles.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
-    <title>TURISMO ARG</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/footer.css') }}">
+    <title>
+        {% block titulo %}
+        ADMINISTRACION TURISMO ARG
+        {% endblock titulo %}
+    </title>
 </head>
 <body>
     {% include "header.html" %}
@@ -17,6 +21,15 @@
         {% endblock %}
     
     </div>
+    <h1><a href="{{ url_for('inicio') }}">Administración TURISMO ARG</a></h1>
+        <nav>
+            <img class="menuBurger" src="{{ url_for('static', filename='./media/icon/bars-solid.svg') }}" alt="Ménu para dispositivos móviles" title="Menú">
+            <div id="menuPpal" class="oculto visibleH">
+                <a href="{{ url_for('guias_turisticas') }}" class="menuSPA color1">Guias turisticas</a>
+                <a href="{{ url_for('guias') }}" class="menuSPA color1">Guias</a>
+                <a href="{{ url_for('api_docu') }}" class="menuSPA color1">API TURISMO</a>
+            </div>
+        </nav>
     
     {% include "footer.html" %}
     

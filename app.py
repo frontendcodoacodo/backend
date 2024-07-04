@@ -1,18 +1,22 @@
 from flask import Flask
-from flask import jsonify
+from flask_cors import CORS
 
-from componentes.consultar_db import traer_todos
+
 
 app = Flask (__name__)
+app.json.ensure_ascii = False
 
-@app.route('/')
-def inicio():
-    return "<h1>BIENVENIDOS A FLASK</h1>"
+#r= que lo tome crudo, por si algun caracter que no va
+#mi API es publica
+cors = CORS(app, resources={r"/api-turismo/*": {"origins": "*"}})
 
-@app.route('/api/todos')
-def mostrar():
-    contenido = traer_todos()
-    return jsonify(contenido)
+#Importo las vistas
+from componentes.vistas_api import *
+from componentes.vistas_web import *
+#@app.route('/')
+#def inicio():
+#    return "<h1>BIENVENIDOS A FLASK</h1>"
+
 
 if __name__ == '__main__':
     app.run()
