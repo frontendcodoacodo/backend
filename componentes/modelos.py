@@ -1,4 +1,4 @@
-from base_db.conexion_db import conexion
+from base_db.conexion_db import conexion as conexion
 from base_db.tabla_db import Tabla
 
         
