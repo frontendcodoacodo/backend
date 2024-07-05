@@ -13,7 +13,7 @@ config_prod = {
   'user': 'juampaCaC',
   'password': 'prueba1234',
   'host': 'juampaCaC.mysql.pythonanywhere-services.com',
-  'database': 'juampaCaC$turismo_db2024',
+  'database': 'juampaCaC$default',
 }
 
 conexion = mysql.connector.connect(**config_dev)  
