@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+    GUIAS TURISMO ARG 
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<h2 class="color5">Guias asociados a la aplicación</h2>
+<div class="articulos unaColumna">
+    <article>
+        {% if mensaje %}
+            <h3>{{ mensaje }}</h3>
+        {% endif %}
+        <table>
+            <thead>
+                <tr>
+                    <td class="bold">Nombre</td>
+                    <td class="bold">DNI</td>
+                </tr>
+            </thead>
+            <tbody>
+            {% for guia in guias %}
+                <tr>
+                    <td><a href="{{ url_for('ver_detalle', id=guia.id, tipo='guia') }}" title="Ver detalle">{{ guia.nombre }}</a></td>
+                    <td>{{ guia.dni }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </article>
+    <div class="crear">
+        <a href="{{ url_for('crear', tipo='guia') }}" class="menuSPA color2">Crear guia</a>
+    </div>
+</div>
+
+{% endblock contenido %}

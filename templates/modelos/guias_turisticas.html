@@ -23,7 +23,7 @@
             <tbody>
             {% for guia_turistica in guias_turisticas %}
                 <tr>
-                    <td><a href="{{ url_for('ver_detalle', id=guia_turistica.id, tipo='guia_turistica') }}" title="Ver detalle">{{ guia_turistica.lugar_turisttico_id }}</a></td>
+                    <td><a href="{{ url_for('ver_detalle', id=guia_turistica.id, tipo='guia_turistica') }}" title="Ver detalle">{{ guia_turistica.lugar_turistico_id }}</a></td>
                     <td>{{ guia_turistica.fecha_inicio.strftime('%d-%m-%Y') }}</td>
                     <td>{{ guia_turistica.guia }}</td>
                 </tr>

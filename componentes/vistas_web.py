@@ -17,13 +17,13 @@ def inicio():
     return render_template('inicio.html')
 
 # ****** Modelos ******
-@app.route('/guia_turistica')
-@app.route('/guia_turistica/<mensaje>')
+@app.route('/guias_turisticas')
+@app.route('/guias_turisticas/<mensaje>')
 def guias_turisticas(mensaje=None):
     guias_turisticas = Guia_turistica.obtener()
     
     for guia_turistica in guias_turisticas:
-        guia_turistica.lugar_turistico_id = Lugar_turistico.obtener('id', guia_turistica.lugar_turistico_id).lugar_turistico
+        guia_turistica.lugar_turistico_id = Lugar_turistico.obtener('id', guia_turistica.lugar_turistico_id)
         guia = Guia.obtener('id', guia_turistica.guia_id)
         d_nom = guia.nombre
         guia_turistica.guia = f"{d_nom}"
