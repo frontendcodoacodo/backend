@@ -1,19 +1,19 @@
 import mysql.connector
 
 #config de desarrollo local, establezco la conexion
-config_dev = {
-  'user': 'root',
-  'password': '',
-  'host': '127.0.0.1',
-  'database': 'turismo_db2',
-}
+# config_dev = {
+#   'user': 'root',
+#   'password': '',
+#   'host': '127.0.0.1',
+#   'database': 'turismo_db2',
+# }
 
 #datos de nuestro despliegue: pythonanywhere
 config_prod = {
-  'user': 'juampaCaC',
-  'password': 'prueba1234',
-  'host': 'juampaCaC.mysql.pythonanywhere-services.com',
-  'database': 'juampaCaC$default',
+  'user': 'eviruel',
+  'password': 'backend82',
+  'host': 'eviruel.mysql.pythonanywhere-services.com',
+  'database': 'eviruel$backend',
 }
 
-conexion = mysql.connector.connect(**config_dev)  
+conexion = mysql.connector.connect(**config_prod)

@@ -4,7 +4,7 @@ from flask_cors import CORS
 
 
 app = Flask (__name__)
-app.json.ensure_ascii = False
+# app.json.ensure_ascii = False
 
 #r= que lo tome crudo, por si algun caracter que no va
 #mi API es publica
@@ -18,5 +18,5 @@ from componentes.vistas_web import *
 #    return "<h1>BIENVENIDOS A FLASK</h1>"
 
 
-if __name__ == '__main__':
-    app.run()
+# if __name__ == '__main__':
+#     app.run()
